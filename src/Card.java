@@ -33,6 +33,16 @@ public class Card implements Comparable<Card>{
         this.rank = rank;
     }
 
+    public char getCardColor(){
+        switch (this.suite){
+            case 'H':
+            case 'D':
+                return 'R';
+            default:
+                return 'B';
+        }
+    }
+
     @Override
     public int compareTo(Card o) {
         return Integer.compare(this.rank,o.rank);
